@@ -1,0 +1,28 @@
+{
+    "require": {
+        "php": ">=7.2.0",
+        "slim/slim": "^4.1",
+        "slim/http": "^0.7.0",
+        "slim/psr7": "^0.4.0",
+        "atk4/ui": "dev-develop",
+        "atk4/schema": "dev-develop"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "\\": "src/",
+            "Components\\": "src/components/",
+            "Models\\": "src/models/",
+            "Pages\\": "src/pages/",
+            "Api\\": "src/api",
+            "Lib\\": "src/lib"
+        }
+    },
+    "scripts": {
+        "start": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S localhost:8080 -t src/public src/public/index.php"
+        ]
+    }
+}
